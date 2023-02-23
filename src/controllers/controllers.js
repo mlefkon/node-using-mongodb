@@ -3,9 +3,9 @@ import { ProductSchema } from "../models/models.js";
 
 const Product = mongoose.model('Product', ProductSchema);
 
-export const addNewProduct = (req, res) => {
+export const addnewProduct = (req, res) => {
     let newProduct = new Product(req.body);
-    newProduct.save( (err, Product) => {
+    newProduct.save((err, Product) => {
         if (err) {
             res.send(err);
         }
