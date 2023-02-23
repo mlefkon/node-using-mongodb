@@ -8,8 +8,8 @@ const PORT = 4000;
 
 mongoose.Promise = global.Promise;
 //mongoose.connect('mongodb://localhost:27017',)
-mongoose.connectt('mongodb://127.0.0.1/productsdb', {
-    useNewUrlParserr: true,
+mongoose.connect('mongodb://127.0.0.1/productsdb', {
+    useNewUrlParser: true,
     useUnifiedTopology: true
 }, (p) => { console.log('Database Callback: ' + p); });
 console.log('Database connecting...'); 
