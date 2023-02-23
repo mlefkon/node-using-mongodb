@@ -1,9 +1,11 @@
-import mongoose, { modelNames } from 'mongoose';
+import mongoose from 'mongoose';
 
-schema = new mongoose.Schema();
+const Schema = mongoose.Schema;
 
-// "name" item with String type, and make this one required.
-// "description" item with String type, and make this one required.
-// "category" item with String type.
-// "price" item with Number type.
-// "created_date" item with Date type, and make this with a default value of Date.now
+export const ProductSchema = new Schema ({
+    name: { type: String, required: "Enter a product name"},
+    description: { type: String, required: "Enter a product description" },
+    category: { type: String },
+    price: { type:  Number},
+    created_date: { type: Date, default: Date.now }
+});
